@@ -3,8 +3,8 @@ package TpPOO_03;
 public class Vendedor extends Empleado{
     private double valorVenta;
     
-    public Vendedor(String n, byte e, Sueldo sueldo, double valorVenta){
-        super(n, e, sueldo);
+    public Vendedor(String nombre, byte edad, Sueldo sueldo, double valorVenta){
+        super(nombre, edad, sueldo);
         this.valorVenta = valorVenta;
     }
     

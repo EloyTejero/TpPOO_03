@@ -4,8 +4,8 @@ public class EmpleadoDirectivo extends Empleado{
     private String categoria;
     private Empleado[] subordinados;
     
-    public EmpleadoDirectivo(String n, byte e, Sueldo sueldo, String categoria, Empleado[] subordinados){
-        super(n, e, sueldo);
+    public EmpleadoDirectivo(String nombre, byte edad, Sueldo sueldo, String categoria, Empleado[] subordinados){
+        super(nombre, edad, sueldo);
         this.categoria = categoria;
         this.subordinados = subordinados;
     }

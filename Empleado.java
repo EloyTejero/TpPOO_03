@@ -7,8 +7,8 @@ package TpPOO_03;
 public class Empleado extends Persona{
     private Sueldo sueldo;
     
-    public Empleado(String n, byte e, Sueldo sueldo)    {
-        super(n,e);
+    public Empleado(String nombre, byte edad, Sueldo sueldo)    {
+        super(nombre,edad);
         
         this.sueldo= sueldo;
         
