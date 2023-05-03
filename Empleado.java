@@ -5,9 +5,8 @@ package TpPOO_03;
  * @author ET36
  */
 public class Empleado extends Persona{
-    
-    
     private Sueldo sueldo;
+    
     public Empleado(String n, byte e, Sueldo sueldo)    {
         super(n,e);
         
@@ -19,7 +18,9 @@ public class Empleado extends Persona{
     public String toString() {
         return "Empleado{" + "sueldo=" + sueldo + '}';
     }
-    
-    
+
+    public Sueldo getSueldo() {
+        return sueldo;
+    }
     
 }

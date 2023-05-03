@@ -12,4 +12,11 @@ public class Vendedor extends Empleado{
         double comision =  (2*valorVenta)/100;
         this.getSueldo().setSueldoNeto(this.getSueldo().getSueldoNeto()+comision);
     }
+
+    @Override
+    public String toString() {
+        return "Vendedor{" + "valorVenta=" + valorVenta + '}';
+    }
+    
+    
 }
