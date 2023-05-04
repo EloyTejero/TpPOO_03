@@ -15,7 +15,9 @@ public class Vendedor extends Empleado{
 
     @Override
     public String toString() {
-        return "Vendedor{" + "valorVenta=" + valorVenta + '}';
+        super.getSueldo().calcularSueldoNeto(); //se calcula el sueldo neto para este objeto
+        comision(); //se actualiza el valor en funcion de la comision de las ventas
+        return "Vendedor nombre: "+super.getNombre()+", sueldo: "+super.getSueldo().getSueldoNeto()+", valor de la venta: "+valorVenta;
     }
     
     

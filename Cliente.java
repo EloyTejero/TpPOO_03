@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package TpPOO_03;
 
-/**
- *
- * @author ET36
- */
 public class Cliente extends Persona{
     private String telefono;
 
@@ -18,9 +10,7 @@ public class Cliente extends Persona{
 
     @Override
     public void mostrarDatos() {
-         System.out.println( "Persona " + " nombre = " + super.getNombre() + ", edad= " + super.getEdad() + " telefono " + telefono);
+         System.out.println("Cliente nombre = "+super.getNombre()+", edad= "+super.getEdad()+" telefono " + telefono);
     }
-
-   
     
 } 

@@ -8,9 +8,34 @@ public class Main {
 
     public static void main(String[] args) {
         Empresa empresa = llenarEmpresa();
-        
+        menuMostrarDatos(empresa);
     }
-
+    
+    public static void menuMostrarDatos(Empresa empresa){
+        boolean terminado = false;
+        int opc;
+        
+        do{
+            System.out.println("Ingrese opcion: 1.Mostrar de clientes, 2.Mostrar datos de empleados, 3.Salir");
+            opc = in.nextInt();
+            in.nextLine();
+            
+            switch(opc){
+                case 1: mostrarDatos(empresa.getClientes());
+                        break;
+                case 2: mostrarDatos(empresa.getEmpleados());
+                        break;
+                case 3: terminado = true;
+            }
+        }while(terminado);
+    }
+    
+    public static void mostrarDatos(Persona persona[]){
+        for (Persona p : persona) {
+            System.out.println(p.toString());
+        }
+    }
+    
     public static Empresa llenarEmpresa() {
         
         Cliente clientes[] = llenarClientes();
@@ -23,7 +48,7 @@ public class Main {
 
     public static Cliente[] llenarClientes() {
         Cliente c[];
-        int cant = 0;
+        int cant;
         System.out.println("Cuantos clientes desea digitar");
         cant = in.nextInt();
         c = new Cliente[cant];
@@ -45,13 +70,13 @@ public class Main {
 
     public static Empleado[] llenarEmpleados() {
         
-        int cant = 0;
+        int cant;
         System.out.println("Cuantos empleados desea digitar");
         cant = in.nextInt();
         Empleado[] e = new Empleado[cant];
 
         for (int i = 0; i < cant; i++) {
-            System.out.println("que tipo de empleado desea, d (directivo ),v (vendedor)");
+            System.out.println("que tipo de empleado desea, d (directivo),v (vendedor)");
             String opc = in.next();
             switch (opc) {
                 case "d": e[i] = cargarDirectivo();
@@ -63,7 +88,6 @@ public class Main {
     }
     
     public static Vendedor cargarVendedor() {
-        Empleado empleados[];
         System.out.println("digite su nombre");
         String nombreDirectivo = in.next();
         System.out.println("digite su edad");
@@ -84,7 +108,7 @@ public class Main {
         byte edadDirectivo = in.nextByte();
         Sueldo sueldoDirectivo = cargarSueldo();
         System.out.println("que categoria es ");
-        String categoria = in.next();
+        String categoria = in.nextLine();
 
         System.out.println("cuantos empleados subordinados");
         int cantEmpleados = in.nextInt();
@@ -100,19 +124,17 @@ public class Main {
         }
 
         return new EmpleadoDirectivo(nombreDirectivo, edadDirectivo, sueldoDirectivo, categoria, empleados);
-        
     }
 
     public static Sueldo cargarSueldo() {
-        System.out.println("digite obra social");
+        System.out.println("digite $ de obra social");
         double obraSocial = in.nextDouble();
-        System.out.println("digite jubilacion");
+        System.out.println("digite % de jubilacion");
         double jubilacion = in.nextDouble();
-        System.out.println("digite presentismo");
+        System.out.println("digite % de  presentismo");
         double presentismo = in.nextDouble();
         System.out.println("digite sueldo bruto");
         double sueldoBruto = in.nextDouble();
-        System.out.println("digite sueldo neto");
         
         return new Sueldo(obraSocial, jubilacion, presentismo, sueldoBruto);
     }

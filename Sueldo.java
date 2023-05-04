@@ -1,4 +1,3 @@
-
 package TpPOO_03;
 
 
@@ -14,7 +13,6 @@ public class Sueldo {
         this.jubilacion = jubilacion;
         this.presentismo = presentismo;
         this.sueldoBruto = sueldoBruto;
-        
     }
     
     public double calcularSueldoNeto(){

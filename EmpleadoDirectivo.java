@@ -12,7 +12,8 @@ public class EmpleadoDirectivo extends Empleado{
 
     @Override
     public String toString() {
-        return "EmpleadoDirectivo{" + "categoria=" + categoria + ", subordinados=" + subordinados + '}';
+        super.getSueldo().calcularSueldoNeto(); //se calcula el sueldo neto para este objeto
+        return "EmpleadoDirectivo nombre: "+super.getNombre()+", categoria: "+categoria+", sueldo: "+super.getSueldo().getSueldoNeto()+", cantidad de subordinados: "+subordinados.length; //para mostrar cada empleado requiere recorrer el array, para practicidad del ejercicio solo dejamos el numero de subordinados para no cambiar la funcion de mostrar datos del main
     }
     
 }
