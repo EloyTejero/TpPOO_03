@@ -6,6 +6,8 @@ public class Vendedor extends Empleado{
     public Vendedor(String nombre, byte edad, Sueldo sueldo, double valorVenta){
         super(nombre, edad, sueldo);
         this.valorVenta = valorVenta;
+        super.getSueldo().calcularSueldoNeto(); //se calcula el sueldo neto para este objeto
+        comision(); //se actualiza el valor en funcion de la comision de las ventas
     }
     
     public void comision(){
@@ -15,10 +17,11 @@ public class Vendedor extends Empleado{
 
     @Override
     public String toString() {
-        super.getSueldo().calcularSueldoNeto(); //se calcula el sueldo neto para este objeto
-        comision(); //se actualiza el valor en funcion de la comision de las ventas
         return "Vendedor nombre: "+super.getNombre()+", sueldo: "+super.getSueldo().getSueldoNeto()+", valor de la venta: "+valorVenta;
     }
-    
+
+    public double getValorVenta() {
+        return valorVenta;
+    }
     
 }

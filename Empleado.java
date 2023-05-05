@@ -9,11 +9,10 @@ public class Empleado extends Persona{
     
     public Empleado(String nombre, byte edad, Sueldo sueldo)    {
         super(nombre,edad);
-        
         this.sueldo= sueldo;
-        
+        sueldo.calcularSueldoNeto(); //se calcula el sueldo neto para este objeto
     }
-
+    
     @Override
     public String toString() {
         return "Empleado"+super.getNombre()+"{" + "sueldoNeto = " + sueldo.getSueldoNeto() + '}';

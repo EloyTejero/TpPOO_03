@@ -10,8 +10,8 @@ public abstract class Persona {
     }
 
     
-    public void mostrarDatos() {
-        System.out.println( "Persona " + " nombre = " + nombre + ", edad= " + edad + '}');
+    public String toString() {
+        return "Persona " + " nombre = " + nombre + ", edad= " + edad + '}';
     }
 
     public String getNombre() {
@@ -21,5 +21,7 @@ public abstract class Persona {
     public int getEdad() {
         return edad;
     }
+    
+    
 
 }

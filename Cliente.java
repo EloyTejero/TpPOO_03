@@ -9,8 +9,8 @@ public class Cliente extends Persona{
     }
 
     @Override
-    public void mostrarDatos() {
-         System.out.println("Cliente nombre = "+super.getNombre()+", edad= "+super.getEdad()+" telefono " + telefono);
+    public String toString() {
+        return "Cliente nombre = "+super.getNombre()+", edad= "+super.getEdad()+" telefono " + telefono;
     }
     
 } 

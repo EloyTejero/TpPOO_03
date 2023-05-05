@@ -22,7 +22,7 @@ public class Sueldo {
 
         return sueldoNeto;
     }
-
+    
     public void setSueldoNeto(double sueldoNeto) {
         this.sueldoNeto = sueldoNeto;
     }
